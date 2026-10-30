@@ -1,0 +1,1541 @@
+[
+  {
+    "page": "home",
+    "device": "mobile",
+    "url": "https://toolbox.rigilgilbert.com/",
+    "fetchedAt": "2026-10-30T01:46:00.465Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 945.366,
+        "display": "0.9 s"
+      },
+      "largest-contentful-paint": {
+        "value": 945.366,
+        "display": "0.9 s"
+      },
+      "total-blocking-time": {
+        "value": 151,
+        "display": "150 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 1143.5093340000099,
+        "display": "1.1 s"
+      }
+    },
+    "issues": [
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "score": 0.94,
+        "display": "150 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "score": 0.59,
+        "display": "220 ms"
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "score": 0,
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "sourceLocation",
+              "valueType": "source-location",
+              "label": "Source"
+            },
+            {
+              "key": "description",
+              "valueType": "code",
+              "label": "Description"
+            }
+          ],
+          "items": [
+            {
+              "source": "network",
+              "description": "Failed to load resource: the server responded with a status of 404 ()",
+              "sourceLocation": {
+                "type": "source-location",
+                "url": "https://toolbox.rigilgilbert.com/favicon.ico",
+                "urlProvider": "network",
+                "line": 0,
+                "column": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "score": 0,
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-BUTTON",
+                "path": "1,HTML,1,BODY,2,HEADER,0,DIV,2,DIV,0,BUTTON",
+                "selector": "header.site-header > div.header-inner > div.header-actions > button.search-shortcut",
+                "boundingRect": {
+                  "top": 19,
+                  "bottom": 46,
+                  "left": 311,
+                  "right": 351,
+                  "width": 40,
+                  "height": 27
+                },
+                "snippet": "<button class=\"search-shortcut\" aria-label=\"Search tools\">",
+                "nodeLabel": "⌘ K",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "RGAAv4",
+              "RGAA-6.1.5"
+            ]
+          }
+        }
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 49 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "source",
+                "valueType": "code"
+              },
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceBytes"
+              },
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceWastedBytes"
+              },
+              "label": "Est Savings"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/4bd1b696-cd566323a07c169f.js",
+              "totalBytes": 65477,
+              "wastedBytes": 26735,
+              "wastedPercent": 40.83084218121843
+            },
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "totalBytes": 66806,
+              "wastedBytes": 23394,
+              "wastedPercent": 35.01694328328675
+            }
+          ],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 50129,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 12 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "location",
+                "valueType": "source-location"
+              },
+              "label": "URL"
+            },
+            {
+              "key": null,
+              "valueType": "code",
+              "subItemsHeading": {
+                "key": "signal"
+              },
+              "label": ""
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Wasted bytes"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "wastedBytes": 12197,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35349
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34737
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34850
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35226
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35484
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34479
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34394
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 12197
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "savings": {
+          "LCP": 0
+        },
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "CF24E0ECBA03284AA54DECDC1DB7A783": {
+                    "url": "https://toolbox.rigilgilbert.com/",
+                    "navStartToEndTime": 450,
+                    "transferSize": 8627,
+                    "isLongest": true,
+                    "children": {
+                      "2986.2": {
+                        "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+                        "navStartToEndTime": 499,
+                        "transferSize": 7085,
+                        "isLongest": true,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 499
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "No origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "display": "Est savings of 80 ms",
+        "savings": {
+          "FCP": 100,
+          "LCP": 100
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+              "totalBytes": 7085,
+              "wastedMs": 150
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "home",
+    "device": "desktop",
+    "url": "https://toolbox.rigilgilbert.com/",
+    "fetchedAt": "2026-10-30T01:46:07.738Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 267.5299,
+        "display": "0.3 s"
+      },
+      "largest-contentful-paint": {
+        "value": 267.5299,
+        "display": "0.3 s"
+      },
+      "total-blocking-time": {
+        "value": 7.5,
+        "display": "10 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 267.5299,
+        "display": "0.3 s"
+      }
+    },
+    "issues": [
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "score": 0,
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-BUTTON",
+                "path": "1,HTML,1,BODY,2,HEADER,0,DIV,2,DIV,0,BUTTON",
+                "selector": "header.site-header > div.header-inner > div.header-actions > button.search-shortcut",
+                "boundingRect": {
+                  "top": 21,
+                  "bottom": 58,
+                  "left": 1074,
+                  "right": 1220,
+                  "width": 145,
+                  "height": 37
+                },
+                "snippet": "<button class=\"search-shortcut\" aria-label=\"Search tools\">",
+                "nodeLabel": "Quick search\n⌘ K",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "RGAAv4",
+              "RGAA-6.1.5"
+            ]
+          }
+        }
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 49 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "source",
+                "valueType": "code"
+              },
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceBytes"
+              },
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceWastedBytes"
+              },
+              "label": "Est Savings"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/4bd1b696-cd566323a07c169f.js",
+              "totalBytes": 65477,
+              "wastedBytes": 26735,
+              "wastedPercent": 40.83084218121843
+            },
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "totalBytes": 66806,
+              "wastedBytes": 23188,
+              "wastedPercent": 34.70899601771006
+            }
+          ],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 49923,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 12 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "location",
+                "valueType": "source-location"
+              },
+              "label": "URL"
+            },
+            {
+              "key": null,
+              "valueType": "code",
+              "subItemsHeading": {
+                "key": "signal"
+              },
+              "label": ""
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Wasted bytes"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "wastedBytes": 12199,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35349
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34737
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34850
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35226
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35484
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34479
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34394
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 12199
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "savings": {
+          "LCP": 0
+        },
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "4E44745425E5D6399229424615236934": {
+                    "url": "https://toolbox.rigilgilbert.com/",
+                    "navStartToEndTime": 46,
+                    "transferSize": 8142,
+                    "isLongest": true,
+                    "children": {
+                      "3037.2": {
+                        "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+                        "navStartToEndTime": 68,
+                        "transferSize": 7130,
+                        "isLongest": true,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 68
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "No origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0.5,
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+              "totalBytes": 7130
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "json-formatter",
+    "device": "mobile",
+    "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+    "fetchedAt": "2026-10-30T01:46:14.450Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 810.6896,
+        "display": "0.8 s"
+      },
+      "largest-contentful-paint": {
+        "value": 810.6896,
+        "display": "0.8 s"
+      },
+      "total-blocking-time": {
+        "value": 104,
+        "display": "100 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 810.6896,
+        "display": "0.8 s"
+      }
+    },
+    "issues": [
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "score": 0.98,
+        "display": "100 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "score": 0.82,
+        "display": "150 ms"
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "score": 0,
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-BUTTON",
+                "path": "1,HTML,1,BODY,2,HEADER,0,DIV,2,DIV,0,BUTTON",
+                "selector": "header.site-header > div.header-inner > div.header-actions > button.search-shortcut",
+                "boundingRect": {
+                  "top": 19,
+                  "bottom": 46,
+                  "left": 311,
+                  "right": 351,
+                  "width": 40,
+                  "height": 27
+                },
+                "snippet": "<button class=\"search-shortcut\" aria-label=\"Search tools\">",
+                "nodeLabel": "⌘ K",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "RGAAv4",
+              "RGAA-6.1.5"
+            ]
+          }
+        }
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 51 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "source",
+                "valueType": "code"
+              },
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceBytes"
+              },
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceWastedBytes"
+              },
+              "label": "Est Savings"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/4bd1b696-cd566323a07c169f.js",
+              "totalBytes": 65477,
+              "wastedBytes": 28743,
+              "wastedPercent": 43.89778177016606
+            },
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "totalBytes": 66806,
+              "wastedBytes": 23340,
+              "wastedPercent": 34.93614319753972
+            }
+          ],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 52083,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 12 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "location",
+                "valueType": "source-location"
+              },
+              "label": "URL"
+            },
+            {
+              "key": null,
+              "valueType": "code",
+              "subItemsHeading": {
+                "key": "signal"
+              },
+              "label": ""
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Wasted bytes"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "wastedBytes": 12194,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35349
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34737
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34850
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35226
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35484
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34479
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34394
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 12194
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "savings": {
+          "LCP": 0
+        },
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "9664A46F8A1B8E92A928507B0F0A9772": {
+                    "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+                    "navStartToEndTime": 230,
+                    "transferSize": 5974,
+                    "isLongest": true,
+                    "children": {
+                      "3049.2": {
+                        "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+                        "navStartToEndTime": 270,
+                        "transferSize": 7079,
+                        "isLongest": true,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 270
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "No origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0.5,
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+              "totalBytes": 7079
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "json-formatter",
+    "device": "desktop",
+    "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+    "fetchedAt": "2026-10-30T01:46:20.720Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 236.0109,
+        "display": "0.2 s"
+      },
+      "largest-contentful-paint": {
+        "value": 236.0109,
+        "display": "0.2 s"
+      },
+      "total-blocking-time": {
+        "value": 4,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 236.0109,
+        "display": "0.2 s"
+      }
+    },
+    "issues": [
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "score": 0,
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-BUTTON",
+                "path": "1,HTML,1,BODY,2,HEADER,0,DIV,2,DIV,0,BUTTON",
+                "selector": "header.site-header > div.header-inner > div.header-actions > button.search-shortcut",
+                "boundingRect": {
+                  "top": 21,
+                  "bottom": 58,
+                  "left": 1074,
+                  "right": 1220,
+                  "width": 145,
+                  "height": 37
+                },
+                "snippet": "<button class=\"search-shortcut\" aria-label=\"Search tools\">",
+                "nodeLabel": "Quick search\n⌘ K",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "RGAAv4",
+              "RGAA-6.1.5"
+            ]
+          }
+        }
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 51 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "source",
+                "valueType": "code"
+              },
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceBytes"
+              },
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceWastedBytes"
+              },
+              "label": "Est Savings"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/4bd1b696-cd566323a07c169f.js",
+              "totalBytes": 65477,
+              "wastedBytes": 28743,
+              "wastedPercent": 43.89778177016606
+            },
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "totalBytes": 66806,
+              "wastedBytes": 23326,
+              "wastedPercent": 34.9163554214384
+            }
+          ],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 52069,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "score": 0.5,
+        "display": "Est savings of 12 KiB",
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "location",
+                "valueType": "source-location"
+              },
+              "label": "URL"
+            },
+            {
+              "key": null,
+              "valueType": "code",
+              "subItemsHeading": {
+                "key": "signal"
+              },
+              "label": ""
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Wasted bytes"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+              "wastedBytes": 12194,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35349
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34737
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34850
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35226
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 35484
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34479
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "https://toolbox.rigilgilbert.com/_next/static/chunks/794-4ca22931fae0b30a.js",
+                      "urlProvider": "network",
+                      "line": 51,
+                      "column": 34394
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 12194
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "savings": {
+          "LCP": 0
+        },
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "1793665D998629466C059A49ABBFF848": {
+                    "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+                    "navStartToEndTime": 54,
+                    "transferSize": 5973,
+                    "isLongest": true,
+                    "children": {
+                      "3061.2": {
+                        "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+                        "navStartToEndTime": 82,
+                        "transferSize": 7079,
+                        "isLongest": true,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 82
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "No origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0.5,
+        "savings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://toolbox.rigilgilbert.com/_next/static/css/0adceace43781c26.css",
+              "totalBytes": 7079
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

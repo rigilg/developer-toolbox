@@ -16,7 +16,20 @@ Added exactly one CNAME: `toolbox.rigilgilbert.com` → `0351ee308018ab3b.vercel
 
 ## Performance measurement
 
-Local Lighthouse failed with `NO_FCP` despite working Playwright rendering. Category scores were null, so no Lighthouse score is claimed. Targets remain Performance 90+, Accessibility/Best Practices/SEO 95+. Automated axe scans passed; this is not a substitute for a measured Lighthouse score or manual assistive-technology audit.
+The Windows audit browser failed, so the audit was rerun successfully in isolated Linux Chrome on GitHub Actions. [Completed audit run](https://github.com/rigilg/developer-toolbox/actions/runs/40987702968). Lighthouse 13.6.0 measured the public production URLs on October 29, 2026 (Chicago time).
+
+| Page | Device | Performance | Accessibility | Best practices | SEO |
+| --- | --- | --- | --- | --- | --- |
+| Homepage | Mobile | 98 | 100 | 96 | 100 |
+| Homepage | Desktop | 100 | 100 | 100 | 100 |
+| JSON Formatter | Mobile | 99 | 100 | 100 | 100 |
+| JSON Formatter | Desktop | 100 | 100 | 100 | 100 |
+
+All sampled pages meet the requested score targets. Mobile LCP was 0.8–0.9 seconds, TBT 100–150 ms, and CLS 0. Desktop LCP was 0.2–0.3 seconds, TBT 0–10 ms, and CLS 0. These are single simulated lab runs, not field-user Core Web Vitals or guarantees for every utility.
+
+The homepage mobile best-practices deduction was a 404 for `/favicon.ico`. A separate accessible-label diagnostic flagged the quick-search button. Both fixes are prepared in the pull request; the table above honestly records production before those fixes. Render-blocking CSS showed an estimated 100 ms mobile LCP opportunity on the homepage; unused/legacy JavaScript diagnostics estimated no LCP saving, so no speculative bundle changes were made.
+
+Full HTML/JSON reports are in the run's `production-lighthouse` artifact (14-day retention). Permanent summaries are in `docs/qa/scores.json` and `docs/qa/lighthouse/results.json`. Run `node scripts/lighthouse.mjs` with installed Chrome-for-Testing on Linux, or use the Production Lighthouse workflow after merge. An audit runtime error fails the job and never masquerades as measured zero scores.
 
 ## Deployment
 

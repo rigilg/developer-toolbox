@@ -62,10 +62,11 @@ export function Header() {
             <button
               className="search-shortcut"
               onClick={() => setOpen(true)}
-              aria-label="Search tools"
+              aria-label="Quick search tools"
+              aria-keyshortcuts="Control+K Meta+K"
             >
               <span>Quick search</span>
-              <kbd>⌘ K</kbd>
+              <kbd aria-hidden="true">⌘ K</kbd>
             </button>
             <Button
               variant="ghost"

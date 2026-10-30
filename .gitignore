@@ -12,3 +12,7 @@ docs/qa/porkbun-toolbox.png
 docs/qa/lighthouse-*.html
 SPECIFICATION.md
 docs/qa/github-main.png
+docs/qa/lighthouse/*.html
+docs/qa/lighthouse/*.json
+!docs/qa/lighthouse/results.json
+docs/qa/production-lighthouse.zip
