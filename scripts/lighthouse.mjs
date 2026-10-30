@@ -113,7 +113,13 @@ try {
         "LIGHTHOUSE_RESULT " +
           JSON.stringify({
             ...result,
-            issues: issues.map(({ details, ...issue }) => issue),
+            issues: issues.map((issue) => ({
+              id: issue.id,
+              title: issue.title,
+              score: issue.score,
+              display: issue.display,
+              savings: issue.savings,
+            })),
           }),
       );
     }

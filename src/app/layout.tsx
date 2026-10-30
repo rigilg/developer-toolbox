@@ -3,6 +3,12 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
   metadataBase: new URL("https://toolbox.rigilgilbert.com"),
   title: {
     default: "Developer Toolbox — Every Developer Tool. One Place.",

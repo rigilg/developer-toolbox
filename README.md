@@ -51,4 +51,10 @@ Inspected `rigilg/base64-tool` and `rigilg/jwt-decoder` without changing those r
 
 `main` is production and `development` is the integration/preview branch. Open feature pull requests into `development`, then promote reviewed changes to `main`. CI performs type checking, lint, unit/component tests, production dependency audit, build and desktop/mobile E2E. Vercel builds the production branch and preview branches via its Git integration. Configure a GitHub ruleset requiring `verify` on `main` if your account plan supports it; do not put production credentials into untrusted pull-request workflows.
 
+## Lighthouse audits
+
+The Production Lighthouse workflow audits the public homepage and JSON Formatter in isolated Linux Chrome, using mobile and desktop simulations. It writes a score table to the job summary and uploads full HTML/JSON reports for 14 days. The checked-in score summary preserves the measured baseline. All four initial samples met the project targets (performance 98–100, accessibility/SEO 100, best practices 96–100).
+
+On Linux: `npm ci`, `npx playwright install --with-deps chromium`, then `node scripts/lighthouse.mjs`. `BASE_URL` selects another reachable deployment. Windows browser launch/paint failures are bypassed by the Linux workflow. No account credentials or utility payloads are submitted. The audit uses single lab runs, so scores can vary and do not establish field INP or real-user performance.
+
 See [tool catalog](docs/TOOLS.md), [security design](docs/SECURITY.md), [deployment](docs/DEPLOYMENT.md), and [validation report](docs/VALIDATION.md). The original user attachment is retained locally and excluded from published source.

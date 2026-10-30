@@ -1,1 +1,146 @@
-{"status":"unavailable","reason":"Local Lighthouse run returned NO_FCP. Null category scores must not be interpreted as measured zero scores.","targets":{"performance":90,"accessibility":95,"best-practices":95,"seo":95}}
+{
+  "status": "measured",
+  "run": "https://github.com/rigilg/developer-toolbox/actions/runs/40987702968",
+  "results": [
+    {
+      "page": "home",
+      "device": "mobile",
+      "url": "https://toolbox.rigilgilbert.com/",
+      "fetchedAt": "2026-10-30T01:46:00.465Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 945.366,
+          "display": "0.9 s"
+        },
+        "largest-contentful-paint": {
+          "value": 945.366,
+          "display": "0.9 s"
+        },
+        "total-blocking-time": {
+          "value": 151,
+          "display": "150 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 1143.5093340000099,
+          "display": "1.1 s"
+        }
+      }
+    },
+    {
+      "page": "home",
+      "device": "desktop",
+      "url": "https://toolbox.rigilgilbert.com/",
+      "fetchedAt": "2026-10-30T01:46:07.738Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 267.5299,
+          "display": "0.3 s"
+        },
+        "largest-contentful-paint": {
+          "value": 267.5299,
+          "display": "0.3 s"
+        },
+        "total-blocking-time": {
+          "value": 7.5,
+          "display": "10 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 267.5299,
+          "display": "0.3 s"
+        }
+      }
+    },
+    {
+      "page": "json-formatter",
+      "device": "mobile",
+      "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+      "fetchedAt": "2026-10-30T01:46:14.450Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 810.6896,
+          "display": "0.8 s"
+        },
+        "largest-contentful-paint": {
+          "value": 810.6896,
+          "display": "0.8 s"
+        },
+        "total-blocking-time": {
+          "value": 104,
+          "display": "100 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 810.6896,
+          "display": "0.8 s"
+        }
+      }
+    },
+    {
+      "page": "json-formatter",
+      "device": "desktop",
+      "url": "https://toolbox.rigilgilbert.com/tools/json-formatter",
+      "fetchedAt": "2026-10-30T01:46:20.720Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 236.0109,
+          "display": "0.2 s"
+        },
+        "largest-contentful-paint": {
+          "value": 236.0109,
+          "display": "0.2 s"
+        },
+        "total-blocking-time": {
+          "value": 4,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 236.0109,
+          "display": "0.2 s"
+        }
+      }
+    }
+  ]
+}
