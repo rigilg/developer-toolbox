@@ -25,7 +25,16 @@ function objects(v: unknown): Record<string, unknown>[] {
 }
 export const typescript: Run = (input, o) => {
   const root = o.name || "Root";
-  if (!identifier(root)) throw Error("Invalid TypeScript type name.");
+  if (
+    !identifier(root) ||
+    javaReserved.has(root) ||
+    new Set(
+      "any unknown never string number boolean object symbol bigint type declare namespace module let yield await export import extends keyof infer readonly unique undefined".split(
+        " ",
+      ),
+    ).has(root)
+  )
+    throw Error("Invalid TypeScript type name.");
   const declarations: string[] = [];
   const used = new Set<string>();
   function model(rows: Record<string, unknown>[], suggested: string): string {

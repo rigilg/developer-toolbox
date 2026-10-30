@@ -16,6 +16,11 @@ export const timestamp: Run = (i, o) => {
       throw Error(
         "Use a Unix number or ISO 8601 date with timezone, e.g. 2026-01-01T00:00:00Z.",
       );
+    const [year, month, day] = i.slice(0, 10).split("-").map(Number);
+    const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+    const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (month < 1 || month > 12 || day < 1 || day > days[month - 1])
+      throw Error("Invalid calendar date.");
     d = new Date(i);
   }
   if (!Number.isFinite(d.getTime()))

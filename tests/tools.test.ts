@@ -83,6 +83,14 @@ describe("encoding edge cases and round trips", () => {
     ).toBe("hello_world"));
 });
 describe("data edge cases", () => {
+  it("rejects TypeScript reserved names", async () =>
+    await expect(
+      run("json-to-typescript", "{}", { name: "class" }),
+    ).rejects.toThrow(/type name/));
+  it("rejects non-finite YAML values", async () =>
+    await expect(
+      run("json-yaml-converter", "x: .nan", { mode: "YAML to JSON" }),
+    ).rejects.toThrow(/non-finite/));
   it("reports JSON line errors", async () =>
     await expect(run("json-formatter", '{\n"a":}')).rejects.toThrow(/line 2/));
   it("round trips YAML", async () => {
@@ -432,6 +440,10 @@ describe("security operations", () => {
   });
 });
 describe("network and date edge cases", () => {
+  it("rejects calendar rollover dates", async () =>
+    await expect(
+      run("timestamp-converter", "2026-02-31T00:00:00Z"),
+    ).rejects.toThrow(/calendar/));
   it("handles prototype-named query parameters as ordinary data", async () =>
     expect(
       JSON.parse(
@@ -591,4 +603,3 @@ describe("generators and regex", () => {
     spy.mockRestore();
   });
 });
-

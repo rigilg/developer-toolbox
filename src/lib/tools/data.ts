@@ -52,7 +52,16 @@ export const yaml: Run = (i, o) => {
     required(i);
     const doc = parseDocument(i, { uniqueKeys: true });
     if (doc.errors.length) throw Error(doc.errors[0].message);
-    return result(doc.toJS({ maxAliasCount: 50 }));
+    const value = doc.toJS({ maxAliasCount: 50 });
+    function check(v: unknown) {
+      if (typeof v === "number" && !Number.isFinite(v))
+        throw Error("JSON cannot represent non-finite YAML numbers.");
+      if (typeof v === "bigint" || v instanceof Map || v instanceof Set)
+        throw Error("YAML value is not representable in JSON.");
+      if (v && typeof v === "object") Object.values(v).forEach(check);
+    }
+    check(value);
+    return result(value);
   }
   return result(stringify(parseJSON(i)), "yaml");
 };
