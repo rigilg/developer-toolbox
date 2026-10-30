@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+existing/
+.env*
+!.env.example
+*.tsbuildinfo
+docs/qa/porkbun-toolbox.png
+docs/qa/lighthouse-*.html
+SPECIFICATION.md

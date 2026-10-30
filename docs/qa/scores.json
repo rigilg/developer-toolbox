@@ -1,0 +1,1 @@
+{"status":"unavailable","reason":"Local Lighthouse run returned NO_FCP. Null category scores must not be interpreted as measured zero scores.","targets":{"performance":90,"accessibility":95,"best-practices":95,"seo":95}}
