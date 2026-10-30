@@ -5,7 +5,7 @@
 - Next.js 16.4.3 production build: passed, with all 37 tool pages and six category pages statically generated.
 - Strict TypeScript: passed.
 - ESLint with zero warnings: passed.
-- Vitest/Testing Library: 162 baseline tests passed, plus final regression cases for reserved TypeScript names, calendar rollover and non-finite YAML numbers. Includes valid inputs, invalid inputs, edge cases, format round trips, RFC 4231 HMAC and RFC 7636 PKCE vectors, valid/invalid RSA and HMAC JWT signatures, private-key rejection, XML entity rejection, disabled JSONPath script evaluation, SCIM grammar, WebAuthn CBOR, subnet /0 /31 /32, epoch timestamps, prototype-named input fields, and local processing checks.
+- Vitest/Testing Library: 165 tests passed, including final regression cases for reserved TypeScript names, calendar rollover and non-finite YAML numbers. Includes valid inputs, invalid inputs, edge cases, format round trips, RFC 4231 HMAC and RFC 7636 PKCE vectors, valid/invalid RSA and HMAC JWT signatures, private-key rejection, XML entity rejection, disabled JSONPath script evaluation, SCIM grammar, WebAuthn CBOR, subnet /0 /31 /32, epoch timestamps, prototype-named input fields, and local processing checks.
 - Playwright: 18 tests passed locally and 18 passed against the actual production HTTPS domain. Covers all dedicated routes, every local utility with valid input, known file-hash output, viewport overflow, search, navigation, theme, copy, clear, download, local-input privacy, regex worker deadline, inaccessible certificate destinations and axe WCAG A/AA scans on homepage/workbenches.
 - Dependency audit after removing unused packages: zero reported vulnerabilities.
 - Screenshots in `docs/qa` show desktop/mobile homepage and JSON workbench with synthetic examples only.
@@ -29,7 +29,17 @@ Initial deployment `dpl_6KjCmYFkAnhefh3zzkkjLfZdZSZf` reached READY from commit 
 - All 18 production browser tests passed across desktop/mobile, including all 36 local utility operations, real file hashing and privacy checks.
 - DNS: Vercel `misconfigured: false`; no unrelated DNS records changed.
 
-User authorized the one-time initial `main`/`development` branch setup. Future changes use pull requests. Automatic Git integration/CI final status is recorded after branch initialization.
+User authorized the one-time initial `main`/`development` branch setup. `main` is the repository default branch. Future changes use pull requests.
+
+Final approved source: `804b6d413f9efb085409516df8f2f603652e5292` on `main` and `development`. Production deployment `dpl_Ew1DgrCD48Kkq9wPfAz3e7NSsnUw` reached READY and owns `toolbox.rigilgilbert.com`.
+
+GitHub CI completed successfully on all three branches: [main run](https://github.com/rigilg/developer-toolbox/actions/runs/40986668163), [development run](https://github.com/rigilg/developer-toolbox/actions/runs/40986667942), [feature run](https://github.com/rigilg/developer-toolbox/actions/runs/40986664279). These run the production build, 165 unit/component tests and 18 desktop/mobile browser checks on Linux.
+
+Connected the existing GitHub integration to the Vercel project; the Vercel API now lists `rigilg/developer-toolbox` as a linked Git project. No new account credentials or expanded GitHub app permissions were created.
+
+Direct TLS verification: authorized TLS 1.3, CN/SAN `toolbox.rigilgilbert.com`, issuer Let's Encrypt YR2, validity October 30, 2026 00:33:30 UTC through January 28, 2027 00:33:29 UTC. Automatic renewal is managed by Vercel.
+
+Production error/fatal runtime-log scan over the release window returned no matching logs. This is a point-in-time observation, not continuous monitoring. No tracking/drain integration was added.
 
 ## Scope limitations
 

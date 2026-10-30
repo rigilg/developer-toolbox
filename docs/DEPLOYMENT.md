@@ -26,7 +26,7 @@ The following target was retrieved from Vercel's actual configuration for this p
 5. Return to the Vercel project's Domains page and refresh the configuration. Wait for propagation and automatic certificate issuance.
 6. Verify HTTPS and the HTTP → HTTPS redirect at the custom domain. Check homepage, tool routes, assets, local processing, certificate diagnostics and mobile layout.
 
-Domain ownership was accepted by Vercel; at the first configuration check the DNS still resolved to Porkbun parking. A verified ownership flag is not proof of working DNS or HTTPS. See VALIDATION.md for the final observed status.
+DNS was configured successfully with the exact record above. Vercel reports `misconfigured: false`, and HTTPS/HTTP redirection and the live app were verified. The existing GitHub integration is connected. `main` is production and `development` provides previews. See VALIDATION.md for deployment IDs, TLS details and actual test results.
 
 ## Rollback
 
